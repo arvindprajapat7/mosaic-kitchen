@@ -74,7 +74,7 @@ function Hero() {
 
           {/* RIGHT IMAGE (SLIDER) */}
           <div className="flex-1 relative mt-10 lg:mt-0 flex justify-center">
-            <AnimatePresence mode="wait">
+            {/* <AnimatePresence mode="wait">
               <motion.img
                 key={active}
                 src={images[active]}
@@ -84,10 +84,10 @@ function Hero() {
                 transition={{ duration: 0.5 }}
                 className="w-[280px] md:w-[380px] lg:w-[450px] object-cover rounded-[40%]"
               />
-            </AnimatePresence>
+            </AnimatePresence> */}
 
             {/* ROTATING CIRCLE */}
-            <div className="absolute top-[-70px] left-[-3%] md:left-[-3%]">
+            <div className="absolute top-[-300px] left-[-3%] md:left-[-3%]">
               <CircleCTA />
             </div>
           </div>

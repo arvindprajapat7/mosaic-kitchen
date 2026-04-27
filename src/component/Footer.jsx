@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import galleryImages from "../data/galleryImages";
+import { GrLocation } from "react-icons/gr";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -28,7 +32,6 @@ function Footer() {
 
       {/* Footer */}
       <footer className="bg-black text-white">
-        
         {/* Footer Content */}
         <div
           className="relative bg-cover bg-center"
@@ -38,7 +41,6 @@ function Footer() {
           <div className="absolute inset-0 bg-black/90"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
-            
             {/* LEFT */}
             <div>
               <img
@@ -48,21 +50,40 @@ function Footer() {
               />
 
               <div className="space-y-4 text-gray-300 text-sm">
-                <p>📍 #104, 460 Trans-Canada Hwy, Duncan, BC</p>
-                <p>✉ support@mymosaickitchen.com</p>
-                <p>📞 +1-250-597-5033</p>
+                <p className="flex items-center gap-3">
+                  <GrLocation className="text-yellow-400 text-lg" />
+                  #104, 460 TRANS-CANADA HWY, DUNCAN, BC V9L 3R6
+                </p>
+
+                <p className="flex items-center gap-3">
+                  <MdOutlineEmail className="text-yellow-400 text-lg" />
+                  support@mymosaickitchen.com
+                </p>
+
+                <p className="flex items-center gap-3">
+                  <FaPhoneAlt className="text-yellow-400 text-lg" />
+                 +1-250-597-5033
+                </p>
               </div>
             </div>
 
             {/* CENTER */}
-            <div>
+            <div className=" text-center">
               <h3 className="text-lg font-semibold mb-4">Our Links</h3>
               <ul className="space-y-3 text-gray-300 text-sm">
                 <li className="hover:text-yellow-400 cursor-pointer">Home</li>
-                <li className="hover:text-yellow-400 cursor-pointer">About Us</li>
-                <li className="hover:text-yellow-400 cursor-pointer">Our Menus</li>
-                <li className="hover:text-yellow-400 cursor-pointer">Our Special</li>
-                <li className="hover:text-yellow-400 cursor-pointer">Contact Us</li>
+                <li className="hover:text-yellow-400 cursor-pointer">
+                  About Us
+                </li>
+                <li className="hover:text-yellow-400 cursor-pointer">
+                  Our Menus
+                </li>
+                <li className="hover:text-yellow-400 cursor-pointer">
+                  Our Special
+                </li>
+                <li className="hover:text-yellow-400 cursor-pointer">
+                  Contact Us
+                </li>
               </ul>
             </div>
 
@@ -77,7 +98,6 @@ function Footer() {
                 ></iframe>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -89,10 +109,41 @@ function Footer() {
           </p>
 
           <div className="flex gap-4 mt-2 md:mt-0">
-            <span className="hover:text-yellow-400 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-yellow-400 cursor-pointer">Terms & Conditions</span>
-            <span className="hover:text-yellow-400 cursor-pointer">Disclaimer</span>
-          </div>
+  
+  <Link
+    to="/privacy-policy"
+     className={({ isActive }) =>
+    isActive
+      ? "text-yellow-400"
+      : "hover:text-yellow-400 transition"
+  }
+  >
+    Privacy Policy
+  </Link>
+
+  <Link
+    to="/terms-conditions"
+     className={({ isActive }) =>
+    isActive
+      ? "text-yellow-400"
+      : "hover:text-yellow-400 transition"
+  }
+  >
+    Terms & Conditions
+  </Link>
+
+  <Link
+    to="/disclaimer"
+     className={({ isActive }) =>
+    isActive
+      ? "text-yellow-400"
+      : "hover:text-yellow-400 transition"
+  }
+  >
+    Disclaimer
+  </Link>
+
+</div>
         </div>
       </footer>
     </>

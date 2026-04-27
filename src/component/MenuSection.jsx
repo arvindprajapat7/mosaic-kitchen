@@ -1,5 +1,5 @@
 import MenuCard from "../component/MenuCard";
-import menuData from "../data/menusData";
+import menu from "../data/menusData";
 
 function MenuSection() {
   return (
@@ -25,13 +25,11 @@ function MenuSection() {
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {menuData.map((item) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {menu.map((item, index) => (
             <MenuCard
-              key={item.id}
-              title={item.title}
-              image={item.image}
-              onClick={() => console.log(item.title)}
+              key={index}
+              title={item.mainCategory}
             />
           ))}
         </div>

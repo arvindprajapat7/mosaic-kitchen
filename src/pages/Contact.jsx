@@ -1,4 +1,8 @@
+import { GrLocation } from "react-icons/gr";
 import InnerBanner from "../component/InnerBanner";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaPhoneAlt,FaRegClock} from "react-icons/fa";
+
 
 function Contact() {
   return <>
@@ -20,9 +24,11 @@ function Contact() {
             
             {/* Card */}
             <div className="flex items-center gap-4 bg-yellow-400 rounded-xl p-4">
-              <div className="bg-white rounded-lg p-3 text-xl">📍</div>
+              <div className="bg-white rounded-lg p-3 text-xl">
+                <GrLocation className="  text-2xl" />
+              </div>
               <div>
-                <h4 className="font-semibold">Address</h4>
+                <h4 className="font-bold text-2xl">Address</h4>
                 <p className="text-sm text-black/70">
                   #104, 460 Trans-Canada Hwy, Duncan, BC V9L 3R6
                 </p>
@@ -30,9 +36,11 @@ function Contact() {
             </div>
 
             <div className="flex items-center gap-4 bg-yellow-400 rounded-xl p-4">
-              <div className="bg-white rounded-lg p-3 text-xl">📞</div>
+              <div className="bg-white rounded-lg p-3 text-xl">
+                <FaPhoneAlt className=" text-2xl" />
+              </div>
               <div>
-                <h4 className="font-semibold">Call Us</h4>
+                <h4 className="font-bold text-2xl">Call Us</h4>
                 <p className="text-sm text-black/70">
                   +1-250-597-5033
                 </p>
@@ -40,9 +48,11 @@ function Contact() {
             </div>
 
             <div className="flex items-center gap-4 bg-yellow-400 rounded-xl p-4">
-              <div className="bg-white rounded-lg p-3 text-xl">✉</div>
+              <div className="bg-white rounded-lg p-3 text-xl">
+                <MdOutlineEmail className=" text-2xl" />
+              </div>
               <div>
-                <h4 className="font-semibold">Email Address</h4>
+                <h4 className="font-bold text-2xl">Email Address</h4>
                 <p className="text-sm text-black/70">
                   support@mymosaickitchen.com
                 </p>
@@ -50,9 +60,11 @@ function Contact() {
             </div>
 
             <div className="flex items-center gap-4 bg-yellow-400 rounded-xl p-4">
-              <div className="bg-white rounded-lg p-3 text-xl">⏰</div>
+              <div className="bg-white rounded-lg p-3 text-xl">
+                <FaRegClock className="text-2xl"/>
+              </div>
               <div>
-                <h4 className="font-semibold">Opening Hours</h4>
+                <h4 className="font-bold text-2xl">Opening Hours</h4>
                 <p className="text-sm text-black/70">
                   Mon-Sun: 8AM - 9PM
                 </p>

@@ -15,13 +15,13 @@ function Menu() {
       
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {menuData.map((item) => (
-            <MenuCard
-              key={item.id}
-              title={item.title}
+        <div className="grid grid-cols-2 md:grid-cols-3  gap-6">
+          {menuData.map((item,index) => (
+             <MenuCard
+              key={index}
+              title={item.mainCategory}   
               image={item.image}
-              onClick={() => console.log(item.title)}
+              onClick={() => console.log(item.mainCategory)}
             />
           ))}
         </div>
