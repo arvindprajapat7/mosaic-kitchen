@@ -3,6 +3,9 @@ import img1 from "../../public/images/mosaic-logo.webp";
 import img2 from "../../public/images/mosaic-logo.webp";
 import img3 from "../../public/images/mosaic-logo.webp";
 import img4 from "../../public/images/mosaic-logo.webp";
+
+import CircleCTA from "../component/CircleCTA";
+import bgImg from "../../public/images/hero-bg.webp";
 const images = [
   "/images/mosaic-logo.webp",
   "/images/mosaic-logo.webp",
@@ -11,110 +14,86 @@ const images = [
 ];
 
 function HeroSection() {
-  const [active, setActive] = useState(0);
-
-  // 🔁 Auto change every 10 sec
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % images.length);
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, []);
+ const [active, setActive] = useState(0);
 
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden">
-      
-      {/* Background */}
-      <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-30"></div>
+   <section className="relative w-full overflow-hidden">
+        {/* FIXED BACKGROUND */}
+        <div className="absolute inset-0">
+          <img src={bgImg} className="w-full h-full object-cover" alt="" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
-        
-        {/* LEFT */}
-        <div>
-          
-          {/* Tagline */}
-          <div className="inline-block bg-yellow-400 text-black px-3 py-2 mb-4 font-semibold">
-            Discover a vibrant fusion of flavor and wellness 
-            at Mosaic Kitchen & Bar.
-          </div>
-
-          {/* Title */}
-          <h1 className="text-[70px] md:text-[100px] font-extrabold leading-none">
-            <span className="text-transparent stroke-text">MOSAIC</span>
-            <br />
-            <span className="text-white text-[40px] md:text-[60px]">
-              Kitchen & Bar
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-gray-300 mt-4 max-w-xl">
-            Our thoughtfully crafted menu brings you wholesome, mouthwatering dishes made with fresh, quality ingredients. Whether you're dining in or grabbing a quick bite, enjoy food that feels as good as it tastes.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex gap-4 mt-6 flex-wrap">
-            
-            <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold flex items-center gap-2">
-              🍽 Click Here to Order
-            </button>
-
-            <button className="bg-white text-black px-6 py-3 rounded-full font-semibold flex items-center gap-2">
-              ⬇ Download Menu
-            </button>
-
-          </div>
+          {/* Gradient Overlay */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(99.16deg, #000000 2.67%, rgba(8, 8, 8, 0.9) 35.11%, rgba(13, 12, 12, 0.45) 99%)",
+            }}
+          />
         </div>
 
-        {/* RIGHT */}
-        <div className="relative flex justify-center items-center">
-          
-          {/* Blob Shape */}
-          <div className="relative w-[350px] h-[450px]">
-            
-            <img
-              src={images[active]}
-              className="w-full h-full object-cover 
-              rounded-[60%_40%_55%_45%/55%_60%_40%_45%]"
-            />
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-[180px] pb-10 md:pb-20 flex flex-col lg:flex-row items-center">
+          {/* LEFT */}
+          <div className="flex-1 text-white">
+            <p className="max-w-[450px] mb-4">
+              <span className="bg-yellow-400 text-black  inline text-xl font-semibold highlight-text leading-[30px] p-0">
+                Discover a vibrant fusion of flavor and wellness at Mosaic
+                Kitchen & Bar.
+              </span>
+            </p>
+            <h1 className="text-[60px] md:text-[90px] xl:text-[150px] font-extrabold leading-none text-transparent stroke-text">
+              MOSAIC
+            </h1>
 
-            {/* White Border */}
-            <div className="absolute inset-0 border-[8px] border-white 
-            rounded-[60%_40%_55%_45%/55%_60%_40%_45%] pointer-events-none"></div>
+            <h2 className="text-3xl md:text-5xl xl:text-[94px] font-bold mb-4">
+              Kitchen & Bar
+            </h2>
+
+            <p className="text-gray-300 max-w-lg mb-6">
+              Our thoughtfully crafted menu brings you wholesome, mouthwatering
+              dishes made with fresh ingredients.
+            </p>
+
+            <div className="sm:flex  gap-4">
+              <button className="bg-yellow-400 w-full sm:w-auto text-black px-6 py-3 rounded-full font-semibold mb-2 sm:mb-0">
+                Click Here to Order
+              </button>
+
+              <button className="bg-white w-full sm:w-auto text-black px-6 py-3 rounded-full font-semibold">
+                Download Menu
+              </button>
+            </div>
           </div>
 
-          {/* 🔥 Rotating Circle */}
-          <div className="absolute top-10 left-0 w-[120px] h-[120px] flex items-center justify-center">
-            
-            <div className="absolute w-full h-full rounded-full border border-yellow-400 animate-spin-slow"></div>
+          {/* RIGHT IMAGE (SLIDER) */}
+          <div className="hidden flex-1 relative mt-10 lg:mt-0 md:flex justify-center">
+           
 
-            <div className="bg-yellow-400 text-black w-[70px] h-[70px] rounded-full flex items-center justify-center font-bold text-center text-sm">
-              CLICK HERE
+            {/* ROTATING CIRCLE */}
+            <div className="hidden lg:block absolute top-[-300px] left-[-3%]">
+              <CircleCTA />
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Thumbnails */}
-      <div className="absolute bottom-10 right-10 flex gap-3">
-        {images.map((img, i) => (
-          <img
-            key={i}
-            src={img}
-            onClick={() => setActive(i)}
-            className={`w-16 h-16 object-cover rounded-lg cursor-pointer border-2 ${
-              active === i ? "border-yellow-400" : "border-transparent"
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="absolute bottom-0 w-full bg-yellow-400 text-black text-center py-2 text-sm font-medium">
-        🚴 Get Free Delivery On Orders Above **$40** Within **4 Km**
-      </div>
-    </section>
+        {/* THUMBNAILS */}
+        <div className="hidden lg:flex absolute bottom-6 right-6 gap-3 z-20">
+          {images.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              onClick={() => setActive(i)}
+              className={`w-16 h-16 object-cover rounded-lg cursor-pointer border-2 ${
+                active === i ? "border-yellow-400" : "border-transparent"
+              }`}
+            />
+          ))}
+        </div>
+        <div className="hidden lg:block absolute right-[-210px] top-[-90px]">
+         <img src="/images/hero-right-full-img-1.png" alt="" width="680px" className="" />
+        </div>
+      </section>
   );
 }
 

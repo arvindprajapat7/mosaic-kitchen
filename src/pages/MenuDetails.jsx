@@ -3,26 +3,31 @@ import menuData from "../data/menusData";
 import { useEffect, useState } from "react";
 import InnerBanner from "../component/InnerBanner";
 
-// ✅ reusable slug function
+// ✅ slug function
 const slugify = (text) =>
   text.toLowerCase().replace(/\s+/g, "-");
 
 function MenuDetails() {
   const { category } = useParams();
 
-  // ✅ Find category safely
+  // ✅ find category
   const currentCategory = menuData.find(
     (item) => slugify(item.mainCategory) === category
   );
 
-  // ✅ state
   const [activeTab, setActiveTab] = useState("");
 
-  // ✅ set default tab AFTER data is available
+  // ✅ handle default tab + scroll
   useEffect(() => {
     if (currentCategory) {
       setActiveTab(currentCategory.subCategories[0]?.subCategory);
     }
+
+    // ✅ scroll to top on page load
+    window.scrollTo({
+      top: 0,
+      behavior: "auto", // use "smooth" if you want animation
+    });
   }, [currentCategory]);
 
   // ✅ fallback UI
@@ -36,9 +41,10 @@ function MenuDetails() {
 
   return (
     <>
+      {/* 🔥 Banner */}
       <InnerBanner
         title={currentCategory.mainCategory}
-        bgImage="/images/about-inner-bg.png"
+        bgImage={currentCategory.image}
       />
 
       <section className="py-16 px-6 bg-gray-100">
@@ -74,18 +80,25 @@ function MenuDetails() {
                     <h3 className="text-xl font-bold text-black">
                       {item.name}
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-sm mt-1">
                       {item.description}
                     </p>
                   </div>
 
-                  <span className="bg-yellow-400 px-4 py-1 rounded-full font-bold whitespace-nowrap">
+                  <span className="bg-yellow-400 px-4 py-1 rounded-full font-bold whitespace-nowrap h-fit">
                     {item.price}
                   </span>
                 </div>
               ))
             )}
         </div>
+
+        {/* 🔥 Empty state (if no tab selected) */}
+        {!activeTab && (
+          <div className="text-center text-gray-500 mt-10">
+            Select a category to view items
+          </div>
+        )}
       </section>
     </>
   );

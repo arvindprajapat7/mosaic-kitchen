@@ -28,7 +28,7 @@ function WhyChooseUs() {
           </div>
 
           {/* Button */}
-          <button className="mt-4 md:mt-0 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">
+          <button className="hidden md:block mt-4 md:mt-0 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">
             Book a Table
           </button>
         </div>
@@ -85,6 +85,10 @@ function WhyChooseUs() {
           </div>
 
         </div>
+        <div className="text-center mt-5">
+         <button className="md:hidden mt-4 md:mt-0 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">
+            Book a Table
+          </button></div>
       </div>
     </section>
   );

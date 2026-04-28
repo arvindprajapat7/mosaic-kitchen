@@ -12,11 +12,13 @@ import MenuDetails from "./pages/menuDetails";
 import PrivacyPolicy from "./pages/Privacy";
 import TermsConditions from "./pages/TermsCondtions";
 import Disclaimer from "./pages/Disclaimer";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
   return (
     <>
-    <Navbar/>      
+    <Navbar/>    
+    <ScrollToTop/>  
 
       <Routes>
         <Route path="/" element={<Home />} />

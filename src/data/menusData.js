@@ -183,6 +183,7 @@
     },
     {
       "mainCategory": "SOUPS AND SALADS",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
       "subCategories": [
         {
           "subCategory": "Soups",
@@ -240,6 +241,7 @@
     },
     {
       "mainCategory": "STARTERS",
+      "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
       "subCategories": [
         {
           "subCategory": "Appetizers",
@@ -304,6 +306,7 @@
     },
     {
       "mainCategory": "MAINS",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
       "subCategories": [
         {
           "subCategory": "Burgers",
@@ -509,6 +512,7 @@
     },
     {
       "mainCategory": "TANDOORI AND NANCOS",
+      "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950",
       "subCategories": [
         {
           "subCategory": "Tandoori",
@@ -579,6 +583,7 @@
     },
     {
       "mainCategory": "SIDES AND SHAREABLES",
+      "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add",
       "subCategories": [
         {
           "subCategory": "Poutine",
@@ -601,6 +606,7 @@
     },
     {
       "mainCategory": "BREADS AND DESSERTS",
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307",
       "subCategories": [
         {
           "subCategory": "Naan (Fresh Breads)",
@@ -660,6 +666,7 @@
     },
     {
       "mainCategory": "DRINKS",
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e",
       "subCategories": [
         {
           "subCategory": "Freshly-Squeezed Juices (12 oz)",
@@ -713,6 +720,7 @@
     },
     {
       "mainCategory": "BAR MENU",
+      "image": "https://images.unsplash.com/photo-1514361892635-cebb7d33c9e6",
       "subCategories": [
         {
           "subCategory": "Mocktails",
@@ -771,6 +779,7 @@
     },
     {
       "mainCategory": "KIDS MENU",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
       "subCategories": [
         {
           "subCategory": "Kids Meals",
@@ -817,6 +826,7 @@
     },
     {
       "mainCategory": "HAPPY HOURS",
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b",
       "subCategories": [
         {
           "subCategory": "Culinary Delights",

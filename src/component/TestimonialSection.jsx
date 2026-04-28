@@ -17,7 +17,6 @@ function TestimonialSection() {
   return (
     <section className="bg-[#f5f5f5] py-16 px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
-        
         {/* LEFT SIDE */}
         <div>
           <span className="bg-yellow-400 text-black text-xs px-3 py-1 font-semibold">
@@ -29,7 +28,7 @@ function TestimonialSection() {
           </h2>
 
           {/* 🔥 Smooth Slider */}
-          <div className="relative max-w-lg overflow-hidden">
+          <div className="relative max-w-xxl lg:max-w-lg overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}
@@ -48,11 +47,11 @@ function TestimonialSection() {
                     {testimonials[active].name}
                   </h4>
 
-                 <img
-  src={testimonials[active].avatar}
-  className="w-10 h-10 rounded-full object-cover border-[5px] border-[#D9D9D9]"
-  alt=""
-/>
+                  <img
+                    src={testimonials[active].avatar}
+                    className="w-10 h-10 rounded-full object-cover border-[5px] border-[#D9D9D9]"
+                    alt=""
+                  />
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -73,31 +72,29 @@ function TestimonialSection() {
         </div>
 
         {/* RIGHT SIDE (same as before) */}
-         <div className="max-w-[500px] w-full mx-auto">
-       <div className="grid grid-cols-2 gap-[38px] justify-center">
-  
-          <img
-            src="/images/testimonial-fea-1.webp"
-            className="w-[230px] h-[230px] rounded-[10px] object-cover"
-          />
+        <div className="hidden lg:block max-w-[500px] w-full mx-auto">
+          <div className="grid grid-cols-2 gap-[38px] justify-center">
+            <img
+              src="/images/testimonial-fea-1.webp"
+              className="w-[230px] h-[230px] rounded-[10px] object-cover"
+            />
 
-          <img
-            src="/images/testimonial-fea-2.webp"
-            className="w-[230px] h-[230px] rounded-[10px] object-cover"
-          />
+            <img
+              src="/images/testimonial-fea-2.webp"
+              className="w-[230px] h-[230px] rounded-[10px] object-cover"
+            />
 
-          <img
-            src="/images/testimonial-fea-3.webp"
-            className="w-[230px] h-[230px] rounded-[10px] object-cover"
-          />
+            <img
+              src="/images/testimonial-fea-3.webp"
+              className="w-[230px] h-[230px] rounded-[10px] object-cover"
+            />
 
-          <img
-            src="/images/testimonial-fea-4.webp"
-            className="w-[230px] h-[230px] rounded-[10px] object-cover"
-          />
-
-        </div></div>
-
+            <img
+              src="/images/testimonial-fea-4.webp"
+              className="w-[230px] h-[230px] rounded-[10px] object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

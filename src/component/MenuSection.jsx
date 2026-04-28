@@ -25,11 +25,12 @@ function MenuSection() {
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {menu.map((item, index) => (
             <MenuCard
               key={index}
               title={item.mainCategory}
+              // image={item.image}
             />
           ))}
         </div>

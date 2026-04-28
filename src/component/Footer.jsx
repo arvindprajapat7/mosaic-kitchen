@@ -62,13 +62,13 @@ function Footer() {
 
                 <p className="flex items-center gap-3">
                   <FaPhoneAlt className="text-yellow-400 text-lg" />
-                 +1-250-597-5033
+                  +1-250-597-5033
                 </p>
               </div>
             </div>
 
             {/* CENTER */}
-            <div className=" text-center">
+            <div className=" md:text-center">
               <h3 className="text-lg font-semibold mb-4">Our Links</h3>
               <ul className="space-y-3 text-gray-300 text-sm">
                 <li className="hover:text-yellow-400 cursor-pointer">Home</li>
@@ -109,41 +109,39 @@ function Footer() {
           </p>
 
           <div className="flex gap-4 mt-2 md:mt-0">
-  
-  <Link
-    to="/privacy-policy"
-     className={({ isActive }) =>
-    isActive
-      ? "text-yellow-400"
-      : "hover:text-yellow-400 transition"
-  }
-  >
-    Privacy Policy
-  </Link>
+            <Link
+              to="/privacy-policy"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-400"
+                  : "hover:text-yellow-400 transition"
+              }
+            >
+              Privacy Policy
+            </Link>
 
-  <Link
-    to="/terms-conditions"
-     className={({ isActive }) =>
-    isActive
-      ? "text-yellow-400"
-      : "hover:text-yellow-400 transition"
-  }
-  >
-    Terms & Conditions
-  </Link>
+            <Link
+              to="/terms-conditions"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-400"
+                  : "hover:text-yellow-400 transition"
+              }
+            >
+              Terms & Conditions
+            </Link>
 
-  <Link
-    to="/disclaimer"
-     className={({ isActive }) =>
-    isActive
-      ? "text-yellow-400"
-      : "hover:text-yellow-400 transition"
-  }
-  >
-    Disclaimer
-  </Link>
-
-</div>
+            <Link
+              to="/disclaimer"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-400"
+                  : "hover:text-yellow-400 transition"
+              }
+            >
+              Disclaimer
+            </Link>
+          </div>
         </div>
       </footer>
     </>
