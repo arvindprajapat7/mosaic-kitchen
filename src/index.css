@@ -19,3 +19,25 @@
   animation: spinSlow 8s linear infinite;
 }
 
+@keyframes heroImageAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+
+.animate-heroImage {
+  animation: heroImageAnimation 0.6s ease-out;
+}
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}

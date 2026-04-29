@@ -29,7 +29,7 @@ function Navbar() {
           : "py-4"
       }`}
     >
-      <div className="relative max-w-7xl mx-auto px-6 flex items-center justify-between md:justify-end">
+      <div className="relative w-full mx-auto px-6 flex items-center justify-between md:justify-end">
 
         {/* ✅ Logo (left always) */}
         <div className="md:absolute md:left-6 md:top-12 md:-translate-y-1/2">
