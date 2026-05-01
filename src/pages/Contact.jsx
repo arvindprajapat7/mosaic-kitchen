@@ -6,7 +6,7 @@ import { FaPhoneAlt,FaRegClock} from "react-icons/fa";
 
 function Contact() {
   return <>
-    <InnerBanner title="Contact Us" bgImage="/images/about-inner-bg.png"/>
+    <InnerBanner title="Contact Us" bgImage="/images/contact-us-bg.webp"/>
     <section className="bg-[#f5f5f5] py-16 px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
         

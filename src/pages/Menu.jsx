@@ -3,7 +3,7 @@ import MenuCard from "../component/MenuCard";
 import menuData from "../data/menusData";
 function Menu() {
   return <>
-    <InnerBanner title="Our Menu" bgImage="/images/about-inner-bg.png"/>
+    <InnerBanner title="Our Menu" bgImage="/images/menu-bg-1.webp"/>
     <section className="relative py-16 px-6">
       
       {/* Background */}

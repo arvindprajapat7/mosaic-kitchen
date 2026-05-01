@@ -47,18 +47,18 @@ function MenuDetails() {
         bgImage={currentCategory.image}
       />
 
-      <section className="py-16 px-6 bg-gray-100">
+      <section className="px-6 bg-gray-100">
         
         {/* 🔥 Tabs */}
-        <div className="flex overflow-x-auto gap-4 mb-10 bg-white p-4 rounded-full no-scrollbar">
+        <div className="flex overflow-x-auto gap-4 mb-10 bg-yellow-400 p-4 no-scrollbar">
           {currentCategory.subCategories.map((sub, i) => (
             <button
               key={i}
               onClick={() => setActiveTab(sub.subCategory)}
-              className={`px-4 py-2 rounded-full font-medium whitespace-nowrap transition ${
+              className={`px-4 py-2 rounded font-medium whitespace-nowrap transition ${
                 activeTab === sub.subCategory
-                  ? "bg-yellow-400 text-black"
-                  : "bg-gray-200 text-gray-700 hover:bg-yellow-100"
+                  ? "bg-white text-black"
+                  : " text-gray-700 hover:bg-yellow-100"
               }`}
             >
               {sub.subCategory}

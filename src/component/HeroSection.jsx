@@ -79,7 +79,7 @@ function HeroSection() {
       <div className="relative z-10 w-full mx-auto px-6 pt-[180px] pb-10 md:pb-20 flex flex-col lg:flex-row items-center">
         
         {/* LEFT */}
-        <div className="flex-1 text-white">
+        <div className="flex-1 lg:flex-[1.3] text-white">
           <p className="max-w-[450px] mb-4">
             <span className="bg-yellow-400 text-black inline text-xl font-semibold leading-[30px] p-0">
               Discover a vibrant fusion of flavor and wellness at Mosaic
@@ -92,12 +92,12 @@ function HeroSection() {
           </h1>
 
           {/* ✅ Typing Heading */}
-          <h2 className="text-3xl md:text-5xl xl:text-[94px] font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl xl:text-[84px] font-bold mb-4">
             {displayText}
             <span className="ml-1 border-r-2 border-white animate-blink"></span>
           </h2>
 
-          <p className="text-gray-300 max-w-lg mb-6">
+          <p className="text-gray-300 max-w-xg mb-6 font-semibold">
             Our thoughtfully crafted menu brings you wholesome, mouthwatering
             dishes made with fresh ingredients.
           </p>
@@ -114,8 +114,8 @@ function HeroSection() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="hidden flex-1 relative mt-10 lg:mt-0 md:flex justify-center">
-          <div className="hidden lg:block absolute top-[-300px] left-[-3%]">
+        <div className="hidden flex-1 lg:flex-[0.7]  relative mt-10 lg:mt-0 md:flex justify-center">
+          <div className="hidden lg:block absolute top-[-300px] left-[-50%]">
             <CircleCTA />
           </div>
         </div>

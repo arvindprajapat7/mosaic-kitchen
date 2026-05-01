@@ -1,6 +1,6 @@
 function ContactFormSection() {
   return (
-    <section className="bg-[#f5f5f5] py-20 px-6 relative overflow-hidden">
+    <section className="bg-[#f5f5f5] py-20 px-6 relative overflow-hidden" id="book-table">
       
       {/* Yellow Circle (Top Right) */}
       <div className="absolute top-0 right-0 w-40 h-40 md:w-60 md:h-60 bg-yellow-400 rounded-full translate-x-1/3 -translate-y-1/3"></div>

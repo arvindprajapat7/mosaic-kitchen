@@ -3,7 +3,7 @@ import leavesImg from "/images/leaves.png";
 
 function AboutSection() {
   return (
-    <section className="bg-[#f5f5f5] py-16 px-6 relative">
+    <section className="bg-[#f5f5f5] py-6 sm:py-16 px-6 relative">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT IMAGE */}

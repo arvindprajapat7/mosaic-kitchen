@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,13 +25,10 @@ function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-black/80 backdrop-blur-md py-3 shadow-lg"
-          : "py-4"
+        isScrolled ? "bg-black/80 backdrop-blur-md py-3 shadow-lg" : "py-4"
       }`}
     >
       <div className="relative w-full mx-auto px-6 flex items-center justify-between md:justify-end">
-
         {/* ✅ Logo (left always) */}
         <div className="md:absolute md:left-6 md:top-12 md:-translate-y-1/2">
           <img
@@ -64,7 +62,6 @@ function Navbar() {
 
         {/* ✅ Right side */}
         <div className="flex items-center gap-4">
-          
           {/* Desktop Button */}
           <button className="hidden md:block bg-white text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">
             Reserve Table
@@ -104,7 +101,21 @@ function Navbar() {
             </NavLink>
           ))}
 
-          <button className="mt-4 bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold w-full">
+          <button
+            onClick={() => {
+              const element = document.getElementById("book-table");
+              if (element) {
+                const yOffset = -80; // adjust navbar height
+                const y =
+                  element.getBoundingClientRect().top +
+                  window.pageYOffset +
+                  yOffset;
+
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
+            className="mt-4 bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold w-full"
+          >
             Reserve Table
           </button>
         </div>

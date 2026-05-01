@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  scroll-behavior: smooth;
+}
 .stroke-text {
   -webkit-text-stroke: 2px #facc15;
 }
@@ -40,4 +42,21 @@
 
 .animate-blink {
   animation: blink 1s infinite;
+}
+
+@keyframes bounceMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(calc(100vw - 100%));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-bounce-marquee {
+  display: inline-block;
+  animation: bounceMarquee 10s linear infinite;
 }
