@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import CircleCTA from "../component/CircleCTA";
 import bgImg from "../../public/images/hero-bg.webp";
+import { useNavigate } from "react-router-dom";
+import ReserveTableButton from "./ReserveTableButton";
 
 // Thumbnail images
 const thumbnails = [
@@ -28,7 +30,7 @@ const texts = [
 
 function HeroSection() {
   const [active, setActive] = useState(0);
-
+const navigate = useNavigate();
   // Typing states
   const [displayText, setDisplayText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
@@ -103,13 +105,9 @@ function HeroSection() {
           </p>
 
           <div className="sm:flex gap-4">
-            <button className="bg-yellow-400 w-full sm:w-auto text-black px-6 py-3 rounded-full font-semibold mb-2 sm:mb-0">
-              Click Here to Order
-            </button>
-
-            <button className="bg-white w-full sm:w-auto text-black px-6 py-3 rounded-full font-semibold">
-              Download Menu
-            </button>
+        
+             <ReserveTableButton/>
+          
           </div>
         </div>
 

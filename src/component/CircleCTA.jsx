@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 function CircleCTA() {
+  const navigate = useNavigate();
   return (
-    <div className="relative w-[180px] h-[180px] group cursor-pointer">
+    <div className="relative w-[180px] h-[180px] group cursor-pointer"  >
       
       {/* 🔥 BLACK OUTER CIRCLE */}
       <div className="absolute inset-0 bg-black rounded-full"></div>
@@ -30,9 +33,17 @@ function CircleCTA() {
       </div>
 
       {/* 🔥 INNER YELLOW BUTTON */}
-      <div className="absolute inset-[25px] bg-yellow-400 rounded-full flex items-center justify-center text-center font-bold text-black text-lg z-20 m-3">
-        CLICK <br /> HERE
-      </div>
+      <div
+  onClick={() =>
+    window.open(
+      "https://www.techserve-online.com/api/fb/_q47r_d",
+      "_blank"
+    )
+  }
+  className="absolute inset-[25px] bg-yellow-400 rounded-full flex items-center justify-center text-center font-bold text-black text-lg z-20 m-3 cursor-pointer"
+>
+  CLICK <br /> HERE
+</div>
     </div>
   );
 }

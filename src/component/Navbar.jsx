@@ -63,8 +63,8 @@ function Navbar() {
         {/* ✅ Right side */}
         <div className="flex items-center gap-4">
           {/* Desktop Button */}
-          <button className="hidden md:block bg-white text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">
-            Reserve Table
+          <button  onClick={() => window.open("/mosaic-menu.pdf", "_blank")} className="hidden md:block bg-white text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">
+            Download Menu
           </button>
 
           {/* Mobile Menu Icon */}
@@ -101,23 +101,7 @@ function Navbar() {
             </NavLink>
           ))}
 
-          <button
-            onClick={() => {
-              const element = document.getElementById("book-table");
-              if (element) {
-                const yOffset = -80; // adjust navbar height
-                const y =
-                  element.getBoundingClientRect().top +
-                  window.pageYOffset +
-                  yOffset;
-
-                window.scrollTo({ top: y, behavior: "smooth" });
-              }
-            }}
-            className="mt-4 bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold w-full"
-          >
-            Reserve Table
-          </button>
+         
         </div>
       </div>
     </header>

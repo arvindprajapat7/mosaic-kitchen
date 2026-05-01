@@ -1,3 +1,5 @@
+import ReserveTableButton from "./ReserveTableButton";
+
 function WhyChooseUs() {
   return (
     <section className="relative py-20 px-6">
@@ -28,9 +30,7 @@ function WhyChooseUs() {
           </div>
 
           {/* Button */}
-          <button className="hidden md:block mt-4 md:mt-0 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">
-            Book a Table
-          </button>
+          <ReserveTableButton/>
         </div>
 
         {/* Cards */}

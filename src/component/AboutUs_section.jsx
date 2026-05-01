@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import ReserveTableButton from "./ReserveTableButton";
 import aboutImg from "/images/about-us.webp"; 
 import leavesImg from "/images/leaves.png"; 
 
@@ -41,13 +43,11 @@ function AboutSection() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition">
-              Book a Table
-            </button>
-
-            <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition">
-              Read More
-            </button>
+            <ReserveTableButton/>
+             <Link to="/about" className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">
+                   Read More
+                  </Link>
+           
           </div>
 
         </div>
